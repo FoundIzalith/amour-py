@@ -44,5 +44,28 @@ async def books(ctx):
     response = random.choice(RECOMMENDATION) + random.choice(BOOKS)
     await ctx.send(response)
 
+@client.command(name='suggest', help='Give a suggestion')
+async def suggest(ctx, *args):
+    print('Command: suggest')
+
+    try:
+        suggestionFile = open("data/suggestions.txt", "w")
+    except: 
+        print('Failed to open suggestions.txt')
+        await ctx.send("[ERROR] I can't find my notebook!")
+        return 
+
+    try: 
+        suggest = "Suggestion by " + ctx.author.name + " in " + ctx.guild.name + ": " + str(args)
+        suggestionFile.write(suggest)
+        await ctx.send("Acknowledged and saved.")
+    except:
+        print('Suggest failed to write')
+        await ctx.send("[ERROR] Your suggestion sucks and I'm not taking it.")
+        return 
+    
+    
+
+
 client.run(TOKEN)
 
