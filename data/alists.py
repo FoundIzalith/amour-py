@@ -27,11 +27,11 @@ GREETING = [
     '你好',
     'Привет',
     'Hola',
-    'Bonjour,'
+    'Bonjour,',
     'Witam',
     'Hallo',
     'こんにちは',
-    'https://tenor.com/view/roingus-jerboa-hi-hiii-hello-gif-22414572'
+    'https://tenor.com/view/roingus-jerboa-hi-hiii-hello-gif-22414572',
     'I live... again!'
 ]
 
