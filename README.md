@@ -28,4 +28,4 @@ In atoken.py, put the following line:
 
 Replace {yourToken} with the token you generated on the Discord developer portal. 
 
-Open a terminal and run **python amour.py** 
+Open a terminal and run ```python amour.py``` 
