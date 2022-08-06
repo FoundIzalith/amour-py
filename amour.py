@@ -49,14 +49,19 @@ async def suggest(ctx, *args):
     print('Command: suggest')
 
     try:
-        suggestionFile = open("data/suggestions.txt", "w")
+        suggestionFile = open("data/suggestions.txt", "a")
     except: 
         print('Failed to open suggestions.txt')
         await ctx.send("[ERROR] I can't find my notebook!")
         return 
 
     try: 
-        suggest = "Suggestion by " + ctx.author.name + " in " + ctx.guild.name + ": " + str(args)
+        content = ""
+
+        for item in args:    
+            content = content + " " + item
+
+        suggest = "Suggestion by " + ctx.author.name + " in " + ctx.guild.name + ": " + content + "\n"
         suggestionFile.write(suggest)
         await ctx.send("Acknowledged and saved.")
     except:
