@@ -19,12 +19,6 @@ async def on_ready():
 
     #await burrowGeneral.send(random.choice(GREETING))    
 
-@client.command(name='help', help='Provides a list of commands')
-async def help(ctx):
-    print('Command: help')
-    response = 'Available commands: help, greeting.'
-    await ctx.send(response)
-
 @client.command(name='greeting', help='Says hello')
 async def greeting(ctx):
     print('Command: greeting')
