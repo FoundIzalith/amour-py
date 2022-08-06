@@ -3,8 +3,8 @@ import discord
 import random 
 import os
 
-from data.a-lists import GREETING
-from data.a-token import TOKEN
+from alists import GREETING
+from atoken import TOKEN
 
 from discord.ext import commands
 
@@ -17,7 +17,7 @@ async def on_ready():
     burrowGeneral = client.get_channel(374098163516309505)
     print(burrowGeneral.name)
 
-    await burrowGeneral.send(random.choice(GREETING))    
+    #await burrowGeneral.send(random.choice(GREETING))    
 
 @client.command(name='help', help='Provides a list of commands')
 async def help(ctx):
