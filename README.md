@@ -24,7 +24,7 @@ To install and run Amour, install Python3, and then install all necessary packag
 Go to https://discord.com/developers and create a new bot. Copy the token. In the data folder, create a new file titles "atoken.py"
 
 In atoken.py, put the following line:
-``` TOKEN = "{yourToken}```
+``` TOKEN = "{yourToken}"```
 
 Replace {yourToken} with the token you generated on the Discord developer portal. 
 
