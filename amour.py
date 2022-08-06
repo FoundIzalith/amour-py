@@ -2,9 +2,12 @@
 import discord
 import random 
 import os
+import webbrowser 
+import requests 
 
-from alists import GREETING
-from atoken import TOKEN
+from bs4 import BeautifulSoup
+from data.alists import GREETING
+from data.atoken import TOKEN
 
 from discord.ext import commands
 
@@ -23,6 +26,16 @@ async def on_ready():
 async def greeting(ctx):
     print('Command: greeting')
     response = random.choice(GREETING)
+    await ctx.send(response)
+
+@client.command(name='wikipedia', help='Sends a random Wikipedia article')
+async def wikipedia(ctx):
+    print('Command: wikipedia')
+    article = requests.get("https://en.wikipedia.org/wiki/Special:Random")
+    print(article.url)
+    parsed = BeautifulSoup(article.content, "html.parser")
+    title = parsed.find(class_="firstHeading").text
+    response = "Check out this article on " + title + "! " + article.url
     await ctx.send(response)
 
 client.run(TOKEN)
