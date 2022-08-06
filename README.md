@@ -11,6 +11,7 @@ Commands can be invoked with the prefix **$ amour**. Make sure to include a spac
 - Greeting. Say hi to Amour
 - Wikipedia. Get random Wikipedia article
 - Books. Sends a random book recommendation
+- Suggest. Give Amour a suggestion and she will save it to a file 
 
 ## Depencies 
 Amour requires the following packages in order to fully function:
@@ -21,7 +22,7 @@ Amour requires the following packages in order to fully function:
 ## Installation
 To install and run Amour, install Python3, and then install all necessary packages using **pip**. 
 
-Go to https://discord.com/developers and create a new bot. Copy the token. In the data folder, create a new file titles "atoken.py"
+Go to https://discord.com/developers and create a new bot. Copy the token. In the data folder, create a new file titled "atoken.py"
 
 In atoken.py, put the following line:
 ``` TOKEN = "{yourToken}"```
