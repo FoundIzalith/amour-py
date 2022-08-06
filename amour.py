@@ -6,7 +6,7 @@ import webbrowser
 import requests 
 
 from bs4 import BeautifulSoup
-from data.alists import GREETING
+from data.alists import GREETING, RECOMMENDATION, BOOKS
 from data.atoken import TOKEN
 
 from discord.ext import commands
@@ -36,6 +36,12 @@ async def wikipedia(ctx):
     parsed = BeautifulSoup(article.content, "html.parser")
     title = parsed.find(class_="firstHeading").text
     response = "Check out this article on " + title + "! " + article.url
+    await ctx.send(response)
+
+@client.command(name='books', help='Recommends a random book')
+async def books(ctx):
+    print('Command: books')
+    response = random.choice(RECOMMENDATION) + random.choice(BOOKS)
     await ctx.send(response)
 
 client.run(TOKEN)

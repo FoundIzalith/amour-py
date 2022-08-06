@@ -34,3 +34,34 @@ GREETING = [
     'https://tenor.com/view/roingus-jerboa-hi-hiii-hello-gif-22414572'
     'I live... again!'
 ]
+
+RECOMMENDATION = [
+    'You might like ',
+    'I would recommend ',
+    'I enjoyed ',
+    'I like ',
+    'You should try ',
+    'Check out ',
+    'Try '    
+]
+
+BOOKS = [
+    'There and Back Again, also known as The Hobbit, by J. R. R. Tolkien.',
+    'The Lord of the Rings trilogy by J. R. R. Tolkien.',
+    'The Mysterious Island by Jules Verne.',
+    'The Lion, the Witch, and the Wardrobe by C. S. Lewis.',
+    'The Illiad, attributed to Homer.',
+    'The Odyssey, attributed to Homer.',
+    'The Kalevala, compiled by Elias Lönnrot. I knew an Elias once.',
+    'The Prose Edda, compiled by Snorri Sturluson.',
+    'The Poetic Edda, compiled by Snorri Sturluson.',
+    'The Icelandic Sagas.',
+    'Beowulf.',
+    'The Journey to the West',
+    'One Thousand and One Nights.',
+    'Shahnameh.',
+    'The Epic of Gilgamesh.',
+    'The Histories by Herodotus.',
+    'The History of the Peloponnesian War by Thucydides.',
+
+]
