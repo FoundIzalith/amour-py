@@ -23,11 +23,11 @@ GREETING = [
     'Avde.',
     'Elias.',
     'Bruyant.',
-    'Don\'t you have something better to do?'
+    'Don\'t you have something better to do?',
     '你好',
     'Привет',
     'Hola',
-    'Bonjour,',
+    'Bonjour',
     'Witam',
     'Hallo',
     'こんにちは',
