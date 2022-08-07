@@ -8,12 +8,13 @@ Originally, Amour was written in C#, but I lost her code a long time ago and I d
 
 ## Commands
 Commands can be invoked with the prefix **$ amour**. Make sure to include a space between the prefix and the command. Commands include:
-- Greeting. Say hi to Amour
-- Wikipedia. Get random Wikipedia article
-- Books. Sends a random book recommendation
-- Suggest. Give Amour a suggestion and she will save it to a file 
+- greeting. Say hi to Amour
+- wikipedia. Get random Wikipedia article
+- books. Sends a random book recommendation
+- suggest. Give Amour a suggestion and she will save it to a file 
+- wiki. Search dndwiki.io  
 
-## Depencies 
+## Dependencies 
 Amour requires the following packages in order to fully function:
 - Discord.py
 - Requests
