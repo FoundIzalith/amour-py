@@ -69,17 +69,44 @@ async def suggest(ctx, *args):
         await ctx.send("[ERROR] Your suggestion sucks and I'm not taking it.")
         return 
 
+@client.command(name='wiki', help="Searches for D&D rules for you")
+async def wiki(ctx, *args):
+    search = ""
+    for item in args:
+        search = search + "+" + item
+
+    print('Command: wiki ' + search)
+
+    await ctx.send("Sure, I'll take a look for you.")
+
+    query = requests.get("https://www.dndwiki.io/search?query=" + search)
+    parsed = BeautifulSoup(query.content, "html.parser")
+    
+    results = []
+
+    for link in parsed.find_all('a', class_='search-result-title', limit=3):
+        print(link)
+        result = link.get('href')
+        print(result)
+        results.append("https://www.dndwiki.io" + result)
+    
+    await ctx.send("Here's what I found:")
+    await ctx.send(results[0])
+    await ctx.send(results[1])
+    await ctx.send(results[2])
+    
+
 @client.command(name='obscureYoutube', help='Finds an obscure YouTube video')
-async def obscureYoutube(ctx)
+async def obscureYoutube(ctx):
     print('Command: obscureYoutube')
     await ctx.send("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
 
 @client.command(name='configure', help='configure settings')
-async def configure(ctx, *args)
+async def configure(ctx, *args):
     print('Command: configure in ' + ctx.guild)
 
     match args[0]:
-        case test:
+        case "test":
             await ctx.send("?")
         case _:
             await ctx.send("?")
