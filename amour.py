@@ -69,6 +69,11 @@ async def suggest(ctx, *args):
         await ctx.send("[ERROR] Your suggestion sucks and I'm not taking it.")
         return 
 
+@client.command(name='obscureYoutube', help='Finds an obscure YouTube video')
+async def obscureYoutube(ctx)
+    print('Command: obscureYoutube')
+    await ctx.send("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+
 @client.command(name='configure', help='configure settings')
 async def configure(ctx, *args)
     print('Command: configure in ' + ctx.guild)
