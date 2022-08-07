@@ -23,11 +23,13 @@ Amour requires the following packages in order to fully function:
 ## Installation
 To install and run Amour, install Python3, and then install all necessary packages using **pip**. 
 
-Go to https://discord.com/developers and create a new bot. Copy the token. In the data folder, create a new file titled "atoken.py"
+Go to https://discord.com/developers and create a new bot. Copy the token and invite the bot to your server. In the data folder, create a new file titled "atoken.py"
 
 In atoken.py, put the following line:
 ``` TOKEN = "{yourToken}"```
 
 Replace {yourToken} with the token you generated on the Discord developer portal. 
+
+In amisc.py, replace the HOME variable with the ID of your server's general or bot channel. 
 
 Open a terminal and run ```python amour.py``` 
