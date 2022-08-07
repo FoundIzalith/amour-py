@@ -68,9 +68,17 @@ async def suggest(ctx, *args):
         print('Suggest failed to write')
         await ctx.send("[ERROR] Your suggestion sucks and I'm not taking it.")
         return 
-    
-    
 
+@client.command(name='configure', help='configure settings')
+async def configure(ctx, *args)
+    print('Command: configure in ' + ctx.guild)
+
+    match args[0]:
+        case test:
+            await ctx.send("?")
+        case _:
+            await ctx.send("?")
+            
 
 client.run(TOKEN)
 
