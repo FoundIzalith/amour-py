@@ -110,6 +110,11 @@ async def configure(ctx, *args):
             await ctx.send("?")
         case _:
             await ctx.send("?")
+
+@client.command(name='github', help='github')
+async def configure(ctx)
+    print('Command: github')
+    await ctx.send("https://github.com/FoundIzalith/amour-py")
             
 
 client.run(TOKEN)
