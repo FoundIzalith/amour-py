@@ -8,6 +8,7 @@ import requests
 from bs4 import BeautifulSoup
 from data.alists import GREETING, RECOMMENDATION, BOOKS
 from data.atoken import TOKEN
+from data.amisc import HOME 
 
 from discord.ext import commands
 
@@ -17,10 +18,9 @@ client = commands.Bot(command_prefix="$ amour ")
 async def on_ready():
     print(f'{client.user} has connected to Discord!')
 
-    burrowGeneral = client.get_channel(374098163516309505)
-    print(burrowGeneral.name)
+    general = client.get_channel(HOME)
 
-    #await burrowGeneral.send(random.choice(GREETING))    
+    await general.send(random.choice(GREETING))    
 
 @client.command(name='greeting', help='Says hello')
 async def greeting(ctx):
