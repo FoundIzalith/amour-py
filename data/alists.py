@@ -23,7 +23,7 @@ GREETING = [
     'Avde.',
     'Elias.',
     'Bruyant.',
-    'Don\'t you have something better to do?',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Campbell%27s_Soup_tomato_soup_ad_1923_Mdp.39015007005872-33-1559224792.png/800px-Campbell%27s_Soup_tomato_soup_ad_1923_Mdp.39015007005872-33-1559224792.png',
     '你好',
     'Привет',
     'Hola',
