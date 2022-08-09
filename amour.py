@@ -9,6 +9,7 @@ from bs4 import BeautifulSoup
 from data.alists import GREETING, RECOMMENDATION, BOOKS
 from data.atoken import TOKEN
 from data.amisc import HOME 
+from random import randrange 
 
 from discord.ext import commands
 
@@ -20,7 +21,7 @@ async def on_ready():
 
     general = client.get_channel(HOME)
 
-    await general.send(random.choice(GREETING))    
+    #await general.send(random.choice(GREETING))    
 
 @client.command(name='greeting', help='Says hello')
 async def greeting(ctx):
@@ -73,7 +74,7 @@ async def suggest(ctx, *args):
 async def wiki(ctx, *args):
     search = ""
     for item in args:
-        search = search + "+" + item
+        search = search + item + "+"
 
     print('Command: wiki ' + search)
 
@@ -116,6 +117,22 @@ async def github(ctx):
     print('Command: github')
     await ctx.send("https://github.com/FoundIzalith/amour-py")
             
+@client.command(name='deathcount', help='Display Jackson\'s deathcount')
+async def deathcount(ctx, *args):
+    print('Command: deathcount')
+
+    rand1 = randrange(5000)
+    rand2 = randrange(5000)
+    rand = rand1 + rand2
+
+    game = ""
+
+    for item in args:
+        game = game + item + " "
+
+    await ctx.send("Jackson has died " + str(rand) + " times in " + game)
+
+
 def main():
     client.run(TOKEN)
 
