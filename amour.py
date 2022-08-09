@@ -96,22 +96,6 @@ async def wiki(ctx, *args):
     await ctx.send(results[1])
     await ctx.send(results[2])
     
-
-@client.command(name='obscureYoutube', help='Finds an obscure YouTube video')
-async def obscureYoutube(ctx):
-    print('Command: obscureYoutube')
-    await ctx.send("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
-
-@client.command(name='configure', help='configure settings')
-async def configure(ctx, *args):
-    print('Command: configure in ' + ctx.guild)
-
-    match args[0]:
-        case "test":
-            await ctx.send("?")
-        case _:
-            await ctx.send("?")
-
 @client.command(name='github', help='github')
 async def github(ctx):
     print('Command: github')
