@@ -116,6 +116,8 @@ async def github(ctx):
     print('Command: github')
     await ctx.send("https://github.com/FoundIzalith/amour-py")
             
+def main():
+    client.run(TOKEN)
 
-client.run(TOKEN)
-
+if __name__ == '__main__':
+    main()
