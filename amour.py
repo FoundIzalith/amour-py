@@ -21,7 +21,7 @@ async def on_ready():
 
     general = client.get_channel(HOME)
 
-    #await general.send(random.choice(GREETING))    
+    await general.send(random.choice(GREETING))    
 
 @client.command(name='greeting', help='Says hello')
 async def greeting(ctx):
