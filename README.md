@@ -13,6 +13,7 @@ Commands can be invoked with the prefix **$ amour**. Make sure to include a spac
 - books. Sends a random book recommendation
 - suggest. Give Amour a suggestion and she will save it to a file 
 - wiki. Search dndwiki.io  
+- deathcount. Get number of times Jackson has died in a given game
 
 ## Dependencies 
 Amour requires the following packages in order to fully function:
